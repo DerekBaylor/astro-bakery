@@ -1,0 +1,123 @@
+<header class="site-header">
+    <div class="nav-container">
+        <a href="/" class="logo">Derek’s Cakes</a>
+
+        <button
+                class="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/About">About</a>
+            <a href="/Menu">Menu</a>
+            <a href="/Contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+
+    toggle?.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+</script>
+
+<style>
+    :root {
+        --bg: #fff7ed;
+        --accent: #b45309;
+        --text: #3f2a1d;
+        --border: #e7d3b3;
+    }
+
+    .site-header {
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .nav-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--accent);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--text);
+        position: relative;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: var(--accent);
+        transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 1.75rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text);
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--bg);
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            display: none;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+    }
+</style>

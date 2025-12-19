@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MenuCard from '../components/MenuCard.astro';
+---
+
+<Layout title="Menu – Derek’s Cakes">
+
+    <!-- Hero -->
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <h1>Our Menu</h1>
+            <p>
+                Explore our selection of handcrafted cakes, cupcakes, and pastries,
+                made fresh daily.
+            </p>
+        </div>
+    </section>
+
+    <!-- Cakes -->
+    <section class="menu-section">
+        <div class="menu-wrapper">
+            <h2>🎂 Cakes</h2>
+
+            <div class="menu-grid three">
+                <MenuCard
+                        title="Chocolate Raspberry Dream"
+                        description="Rich chocolate cake layered with raspberry filling and ganache."
+                        price="$48"
+                />
+                <MenuCard
+                        title="Vanilla Bean Classic"
+                        description="Light vanilla cake with buttercream frosting."
+                        price="$42"
+                />
+                <MenuCard
+                        title="Lemon Sunshine"
+                        description="Zesty lemon cake with cream cheese icing."
+                        price="$44"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Cupcakes -->
+    <section class="menu-section alt">
+        <div class="menu-wrapper">
+            <h2>🧁 Cupcakes</h2>
+
+            <div class="menu-grid four">
+                <MenuCard title="Chocolate Fudge" description="Decadent and rich." price="$4 ea" />
+                <MenuCard title="Red Velvet" description="Classic with cream cheese icing." price="$4 ea" />
+                <MenuCard title="Vanilla Sprinkle" description="Fun and colorful." price="$3.50 ea" />
+                <MenuCard title="Salted Caramel" description="Sweet with a hint of salt." price="$4.50 ea" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Pastries -->
+    <section class="menu-section">
+        <div class="menu-wrapper">
+            <h2>🥐 Pastries</h2>
+
+            <div class="menu-grid three">
+                <MenuCard title="Butter Croissant" description="Flaky and golden." price="$3" />
+                <MenuCard title="Cinnamon Roll" description="Warm with vanilla glaze." price="$5" />
+                <MenuCard title="Fruit Danish" description="Seasonal fruit filling." price="$4.50" />
+            </div>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+    :root {
+        --bg-light: #fff7ed;
+        --bg-accent: #fde68a;
+        --text-dark: #3f2a1d;
+        --accent: #b45309;
+        --muted: #5a3c28;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .menu-hero {
+        background: linear-gradient(135deg, #fff7ed, #fde68a);
+        padding: clamp(4rem, 10vw, 6rem) 1.25rem;
+        text-align: center;
+    }
+
+    .menu-hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .menu-hero h1 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .menu-hero p {
+        font-size: 1.2rem;
+        color: var(--muted);
+    }
+
+    /* ---------- SECTIONS ---------- */
+
+    .menu-section {
+        padding: 5rem 1.25rem;
+        background: var(--bg-light);
+    }
+
+    .menu-section.alt {
+        background: #fffbeb;
+    }
+
+    .menu-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .menu-wrapper h2 {
+        font-size: 2.25rem;
+        color: var(--text-dark);
+        margin-bottom: 2.5rem;
+    }
+
+    /* ---------- GRIDS ---------- */
+
+    .menu-grid {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .menu-grid.three {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .menu-grid.four {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+</style>

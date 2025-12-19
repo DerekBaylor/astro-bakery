@@ -1,0 +1,256 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us – Derek’s Cakes">
+
+    <!-- Hero -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Contact Us</h1>
+            <p>
+                We’d love to hear from you! Reach out to place an order or ask us anything.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="contact-section">
+        <div class="contact-wrapper">
+
+            <!-- Form -->
+            <div class="contact-form">
+                <h2>Get In Touch</h2>
+
+                <form>
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" />
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="your.email@example.com" />
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" />
+                    </div>
+
+                    <div class="field">
+                        <label for="orderType">Order Type</label>
+                        <select id="orderType" name="orderType">
+                            <option value="">Select an option</option>
+                            <option value="standard">Standard Cake</option>
+                            <option value="custom">Custom Cake</option>
+                            <option value="wedding">Wedding Cake</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Tell us about your cake needs..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Info -->
+            <div class="contact-info">
+                <h2>Visit Our Bakery</h2>
+
+                <div class="info-card">
+                    <h3>Location</h3>
+                    <p>Derek’s Cakes</p>
+                    <p>123 Baker Street</p>
+                    <p>Sweetville, SV 12345</p>
+
+                    <h3>Hours</h3>
+                    <div class="hours">
+                        <div><span>Mon – Fri</span><span>8am – 6pm</span></div>
+                        <div><span>Saturday</span><span>9am – 5pm</span></div>
+                        <div><span>Sunday</span><span>Closed</span></div>
+                    </div>
+
+                    <h3>Contact</h3>
+                    <p>📞 (555) 123-4567</p>
+                    <p>📧 hello@derekscakes.com</p>
+                </div>
+
+                <div class="notice">
+                    <h3>Order Notice</h3>
+                    <p>
+                        Custom cakes require at least 48 hours notice. Wedding and large orders
+                        should be placed at least 2 weeks in advance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+    :root {
+        --bg-light: #fff7ed;
+        --bg-accent: #fde68a;
+        --accent: #b45309;
+        --text-dark: #3f2a1d;
+        --muted: #5a3c28;
+        --border: #fcd34d;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .contact-hero {
+        background: linear-gradient(135deg, #fff7ed, #fde68a);
+        padding: clamp(4rem, 10vw, 6rem) 1.25rem;
+        text-align: center;
+    }
+
+    .contact-hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contact-hero h1 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .contact-hero p {
+        font-size: 1.2rem;
+        color: var(--muted);
+    }
+
+    /* ---------- LAYOUT ---------- */
+
+    .contact-section {
+        padding: 5rem 1.25rem;
+        background: var(--bg-light);
+    }
+
+    .contact-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        gap: 4rem;
+    }
+
+    @media (min-width: 900px) {
+        .contact-wrapper {
+            grid-template-columns: 1.1fr 0.9fr;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: var(--text-dark);
+        margin-bottom: 2rem;
+    }
+
+    /* ---------- FORM ---------- */
+
+    .contact-form form {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 0.75rem 0.9rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--border);
+        font-size: 1rem;
+        outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: var(--accent);
+    }
+
+    button {
+        margin-top: 1rem;
+        background: var(--accent);
+        color: white;
+        padding: 0.9rem;
+        border-radius: 0.6rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    button:hover {
+        background: #92400e;
+    }
+
+    /* ---------- INFO ---------- */
+
+    .info-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .info-card h3 {
+        color: var(--accent);
+        margin: 1.5rem 0 0.75rem;
+    }
+
+    .info-card p {
+        color: #444;
+        margin-bottom: 0.3rem;
+    }
+
+    .hours div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.4rem;
+        color: #444;
+        font-weight: 500;
+    }
+
+    .notice {
+        margin-top: 2rem;
+        background: #fffbeb;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+    }
+
+    .notice h3 {
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .notice p {
+        color: #444;
+        line-height: 1.5;
+    }
+</style>

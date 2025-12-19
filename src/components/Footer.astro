@@ -1,0 +1,116 @@
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <h3>Derek’s Cakes</h3>
+            <p>
+                Handcrafted cakes and pastries made fresh daily with premium ingredients
+                and a whole lot of love.
+            </p>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/menu">Menu</a>
+            <a href="/contact">Contact</a>
+        </div>
+
+        <!-- Hours -->
+        <div class="footer-hours">
+            <h4>Hours</h4>
+            <p>Mon–Fri: 8am – 6pm</p>
+            <p>Saturday: 9am – 5pm</p>
+            <p>Sunday: Closed</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📍 Sweetville, USA</p>
+            <p>📞 (555) 123-4567</p>
+            <p>✉️ hello@derekscakes.com</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © {new Date().getFullYear()} Derek’s Cakes. All rights reserved.
+    </div>
+</footer>
+
+<style>
+    :root {
+        --footer-bg: #3f2a1d;
+        --footer-text: #fef3c7;
+        --footer-muted: #f1d7a0;
+        --footer-accent: #f59e0b;
+        --footer-border: #5c3b28;
+    }
+
+    .site-footer {
+        background: var(--footer-bg);
+        color: var(--footer-text);
+        margin-top: 4rem;
+    }
+
+    .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 3rem 1.25rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .footer-brand h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--footer-accent);
+    }
+
+    .footer-brand p {
+        line-height: 1.6;
+        color: var(--footer-muted);
+    }
+
+    .site-footer h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+        display: block;
+        margin-bottom: 0.4rem;
+        text-decoration: none;
+        color: var(--footer-muted);
+    }
+
+    .footer-links a:hover {
+        color: white;
+    }
+
+    .footer-hours p,
+    .footer-contact p {
+        margin: 0.35rem 0;
+        color: var(--footer-muted);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid var(--footer-border);
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: var(--footer-muted);
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+        .footer-container {
+            text-align: center;
+        }
+    }
+</style>

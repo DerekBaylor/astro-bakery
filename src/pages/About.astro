@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us – Derek’s Cakes">
+
+    <!-- Hero -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>About Derek’s Cakes</h1>
+            <p>A family tradition of excellence in baking since 2010</p>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="about-section">
+        <div class="content-wrapper">
+            <div class="story-card">
+                <h2>Our Story</h2>
+
+                <p>
+                    Derek’s Cakes began in 2010 when Derek Anderson decided to turn his
+                    lifelong passion for baking into a business. What started as a small
+                    home kitchen operation has grown into one of Sweetville’s most beloved
+                    bakeries.
+                </p>
+
+                <p>
+                    Derek learned the art of baking from his grandmother, who taught him
+                    that the secret ingredient in every recipe is love. That philosophy
+                    continues to guide everything we create today.
+                </p>
+
+                <p>
+                    We believe cakes are more than desserts — they’re centerpieces of
+                    celebration, symbols of love, and carriers of cherished memories.
+                </p>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>
+                        To create exceptional cakes that bring joy to every celebration,
+                        using the finest ingredients and time-honored baking techniques.
+                    </p>
+                </div>
+
+                <div class="mission-card">
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li>Quality ingredients, always fresh</li>
+                        <li>Traditional techniques with modern flair</li>
+                        <li>Personalized customer service</li>
+                        <li>Community involvement and support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+        <h2>Meet the Team</h2>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar">👨‍🍳</div>
+                <h3>Derek Anderson</h3>
+                <span>Founder & Head Baker</span>
+                <p>15 years of baking expertise</p>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar">👩‍🍳</div>
+                <h3>Sarah Martinez</h3>
+                <span>Pastry Chef</span>
+                <p>Specialist in decorative designs</p>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar">👨‍💼</div>
+                <h3>James Chen</h3>
+                <span>Customer Experience</span>
+                <p>Here to make your order perfect</p>
+            </div>
+        </div>
+    </section>
+
+</Layout>
+
+<style>
+    :root {
+        --bg-light: #fff7ed;
+        --bg-accent: #fde68a;
+        --text-dark: #3f2a1d;
+        --accent: #b45309;
+        --card-bg: #ffffff;
+        --muted: #5a3c28;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .about-hero {
+        background: linear-gradient(135deg, #fff7ed, #fde68a);
+        padding: clamp(4rem, 10vw, 6rem) 1.25rem;
+        text-align: center;
+    }
+
+    .about-hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .about-hero p {
+        font-size: 1.2rem;
+        color: var(--muted);
+    }
+
+    /* ---------- STORY ---------- */
+
+    .about-section {
+        background: var(--bg-light);
+        padding: 5rem 1.25rem;
+    }
+
+    .content-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .story-card {
+        background: var(--card-bg);
+        padding: 2.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        margin-bottom: 3rem;
+    }
+
+    .story-card h2 {
+        color: var(--accent);
+        margin-bottom: 1.25rem;
+        font-size: 2rem;
+    }
+
+    .story-card p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    /* ---------- MISSION ---------- */
+
+    .mission-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+    }
+
+    .mission-card {
+        background: #fffbeb;
+        padding: 2rem;
+        border-radius: 0.75rem;
+    }
+
+    .mission-card h3 {
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+    }
+
+    .mission-card p,
+    .mission-card li {
+        color: var(--muted);
+        line-height: 1.6;
+    }
+
+    .mission-card ul {
+        padding-left: 1rem;
+    }
+
+    /* ---------- TEAM ---------- */
+
+    .team-section {
+        background: var(--bg-accent);
+        padding: 5rem 1.25rem;
+        text-align: center;
+    }
+
+    .team-section h2 {
+        font-size: 2.25rem;
+        color: var(--text-dark);
+        margin-bottom: 3rem;
+    }
+
+    .team-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+    }
+
+    .team-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+        background: #fde68a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+    }
+
+    .team-card h3 {
+        color: var(--accent);
+        margin-bottom: 0.25rem;
+    }
+
+    .team-card span {
+        display: block;
+        font-weight: 600;
+        color: #92400e;
+        margin-bottom: 0.5rem;
+    }
+
+    .team-card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+    }
+</style>
