@@ -1,43 +1,27 @@
-# Astro Starter Kit: Minimal
+# Derek's Cakes 🎂
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A sample bakery website built with the [Astro](https://astro.build/) framework, vanilla JavaScript, HTML, and CSS. Deployed on Netlify.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Derek's Cakes Homepage](./DereksCakesHomePage.png)
 
-## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠 Tech Stack
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **Framework:** Astro
+- **Languages:** JavaScript, HTML, CSS
+- **Deployment:** Netlify
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🌐 Live Demo
 
-## 🧞 Commands
+[View the live site](https://am-sample-bakery.netlify.app/)
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 👤 Author
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Derek Baylor**
+[LinkedIn](https://linkedin.com/in/derek-baylor) · [GitHub](https://github.com/DerekBaylor)
